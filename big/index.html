@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;   
+        }       
+        .con{
+            width: 100%;
+            height: 1400px;
+            background-image: url(./images/interact.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top:1px ;
+        }
+        
+        .top_center{
+            color: aliceblue;
+            font-size: 36px;
+            position: absolute;
+            top: 36px;
+            left: 37%;
+        }
+        .top_left_time{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            color: aquamarine;
+        }
+        .top_left_sj{
+            float: left;
+            font-size: 32px;
+        }
+        .top_left_nyrt{
+            float: left;
+        }
+        .con_left,.con_center,.con_right{
+            width: 30%;
+            height: 364px;
+            margin-left: 40px;
+            margin-top: 120px;
+            float: left;
+            background-image: url(./images/left-top3.jpg);
+            background-size: 100% 100%;
+            position: relative;
+        }
+        .topleft_border{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 1px solid #10efff;
+            border-top: 1px solid #10efff;
+        }
+        .topright_border{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: 1px solid #10efff;
+            border-right: 1px solid #10efff;
+        }
+        .buttomleft_border{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom:  0;
+            left:  0;
+            border-bottom: 1px solid #10efff;
+            border-left: 1px solid #10efff;
+        }
+        .rightleft_border{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom:  0;
+            right: 0;
+            border-bottom: 1px solid #10efff;
+            border-right: 1px solid #10efff;
+        }
+        .con_left>span,.con_center>span,.con_right>span{
+            color: #10efff;
+            font-weight: 500;
+            margin-left: 15px;
+            position: absolute;
+            top:5px;
+        }
+        #main{
+            width: 90%;
+            height: 320px;
+            margin: 30px auto;
+        }
+        #main1{
+            width: 90%;
+            height: 220px;
+            margin: 110px auto;
+        }
+        #main2{
+            width: 90%;
+            height: 270px;
+            margin: 120px auto;
+        }
+        .con_center>ul{
+            width: 100%;
+            height: 53px;
+            position: absolute;
+            top:40px;
+            left: 20px;
+        }
+        .con_center>ul>li{
+            width: 30%;
+            height: 55px;
+            float: left;
+            background-color: #111F44;
+            text-align: center;
+            color: white;
+            padding-top: 5px;
+        }
+        .con_center>ul>li>span{
+            color: #0080ff;
+        }
+        .bor{
+            border-left:1px solid #10efff;
+            border-right:1px solid #10efff;
+        }
+        .con_right>ul{
+            width: 100%;
+            height: 53px;
+            position: absolute;
+            top:40px;
+            left: 20px;
+        }
+        .con_right>ul>li{
+            width: 30%;
+            height: 55px;
+            float: left;
+            background-color: #111F44;
+            text-align: center;
+            color: white;
+            padding-top: 5px;
+        }
+        .con_right>ul>li>span{
+            color: #0080ff;
+        }
+        .con_right_righ{
+            width: 300px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            top:10px;
+        }
+        .con_right_righ>ul>li{
+            float: left;
+            width: 100px;
+            text-align: center;
+            height: 30px;
+        }
+        .con_right_righ>ul>li:hover{
+            background-image: url(./images/choose-item.png);
+        }
+        .bottom1{
+            width: 46%;
+            height: 420px;
+            background-image: url(./images/left-top3.jpg);
+            background-size: 100% 100%;
+            float: left;
+            position: relative;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        .bottom1>span{
+            color: #10efff;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+        .bottom1>ul>li{
+            color: #10efff;
+            float: left;
+            margin-left: 50px;
+            margin-top: 10px;
+            margin-right: 80px;
+        }
+        .con1{
+            width: 80%;
+            height: 300px;
+            margin-left: 50px;
+            border-top: 2px solid #10efff;
+            overflow: hidden;
+            color: rgb(9, 185, 118);
+        }
+        .lunbo{
+            animation: a 15s linear 1s  infinite;
+        }
+        @keyframes a{
+            0%{
+                transform: translateY(0);
+            }
+            10%{
+                transform: translateY(-20px);
+            }
+            15%{
+                transform: translateY(-20px);
+            }
+            20%{
+                transform: translateY(-40px);
+            }
+            25%{
+                transform: translateY(-40px);
+            }
+            30%{
+                transform: translateY(-70px);
+            }
+            35%{
+                transform: translateY(-70px);
+            }
+            40%{
+                transform: translateY(-100px);
+            }
+            45%{
+                transform: translateY(-100px);
+            }
+            50%{
+                transform: translateY(-130px);
+            }
+            55%{
+                transform: translateY(-130px);
+            }
+            60%{
+                transform: translateY(-160px);
+            }
+            65%{
+                transform: translateY(-160px);
+            }
+            70%{
+                transform: translateY(-190px);
+            }
+            75%{
+                transform: translateY(-190px);
+            }
+            80%{
+                transform: translateY(-220px);
+            }
+            85%{
+                transform: translateY(-220px);
+            }
+            90%{
+                transform: translateY(-250px);
+            }
+            95%{
+                transform: translateY(-250px);
+            }
+            100%{
+                transform: translateY(-280px);
+            }
+            
+        }
+        #main3{
+            width: 90%;
+            height: 370px;
+            position: absolute;
+        }
+        #main4{
+            width: 90%;
+            height: 370px;
+        }
+        #main5{
+            width: 90%;
+            height: 370px;
+        }
+        .top_right{
+            position: absolute;
+            right: 0;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="top_center">政务大数据共享交换平台</div>
+        <div class="top_left">
+            <div class="top_left_time">
+                <div class="top_left_sj"></div>
+                <div class="top_left_nyrt">
+                    <div class="top_left_nyr"></div>
+                    <div class="top_left_t"></div>
+                </div>
+                <div class="top_right">
+                    <svg t="1725776505418" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1364" width="30" height="30"><path d="M731.546 588.952C782.032 501.857 806 432.632 806 384c0-162.372-131.628-294-294-294S218 221.628 218 384c0 48.633 23.968 117.857 74.454 204.952C341.914 674.28 415.131 773.963 512 887.432c96.869-113.469 170.085-213.153 219.546-298.48zM549.64 981.52a50 50 0 0 1-4.727 4.727c-20.788 18.177-52.375 16.06-70.553-4.727C243.453 717.45 128 518.277 128 384 128 171.923 299.923 0 512 0s384 171.923 384 384c0 134.277-115.453 333.45-346.36 597.519zM512 544c88.366 0 160-71.634 160-160s-71.634-160-160-160-160 71.634-160 160 71.634 160 160 160z m0-90c-38.66 0-70-31.34-70-70s31.34-70 70-70 70 31.34 70 70-31.34 70-70 70z" p-id="1365"></path></svg>
+                </div>
+            </div>
+        </div>
+        <div class="con_left">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <span>资源总量构成</span>
+            <div id="main"></div>
+        </div>
+        <div class="con_center">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <span>资源总量统计</span>
+            <ul>
+                <li>15681<br><span>数据总量</span></li>
+                <li class="bor">1731<br><span>更新量</span></li>
+                <li>11753<br><span>共享次数</span></li>
+            </ul>
+            <div id="main1"></div>
+        </div>
+        <div class="con_right">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <span>基础库统计</span>
+            <div class="con_right_righ">
+                <ul>
+                    <li>法人库</li>
+                    <li>人口库</li>
+                    <li>电子证件库</li>
+                </ul>
+            </div>
+            <ul>
+                <li>3971<br><span>数据总量</span></li>
+                <li class="bor">1141<br><span>更新量</span></li>
+                <li>3753<br><span>共享次数</span></li>
+            </ul>
+            <div id="main2"></div>
+        </div>
+        <div class="bottom1">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <br>
+            <span>数据共享次数</span>
+            <ul>
+                <li>资源名称</li>
+                <li>调用方</li>
+                <li>调用时间</li>
+            </ul>
+            <div class="con1">
+                <div class="lunbo">
+                    <p>交通运输局主要职责交通运输局08:21:07</p>
+                    <p>审计局主要职责审计局08:20:26</p>
+                    <p>残联主要职责残联08:20:36</p>
+                    <p>交通运输局主要职责交通运输局08:21:07</p>
+                    <p>审计局主要职责审计局08:20:26</p>
+                    <p>残联主要职责残联08:20:36</p>
+                    <p>交通运输局主要职责交通运输局08:21:07</p>
+                    <p>审计局主要职责审计局08:20:26</p>
+                    <p>残联主要职责残联08:20:36</p>
+                    <p>交通运输局主要职责交通运输局08:21:07</p>
+                    <p>审计局主要职责审计局08:20:26</p>
+                    <p>残联主要职责残联08:20:36</p>
+                    <p>交通运输局主要职责交通运输局08:21:07</p>
+                    <p>审计局主要职责审计局08:20:26</p>
+                    <p>残联主要职责残联08:20:36</p>
+                    <p>交通运输局主要职责交通运输局08:21:07</p>
+                    <p>审计局主要职责审计局08:20:26</p>
+                    <p>残联主要职责残联08:20:36</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom1">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <br>
+            <span>数据共享次数</span>
+            <div id="main3"></div>
+        </div>
+        <div class="bottom1">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <br>
+            <span>主题库统计</span>
+            <div id="main4"></div>
+        </div>
+        <div class="bottom1">
+            <div class="topleft_border"></div>
+            <div class="topright_border"></div>
+            <div class="buttomleft_border"></div>
+            <div class="rightleft_border"></div>
+            <br>
+            <span>主题库共享次数</span>
+            <div id="main5"></div>
+        </div>
+    </div>
+    <script src="./js/echarts.js"></script>
+    <script src="./js/time.js"></script>
+    <script src="./js/echartstable.js"></script>
+</body>
+</html>
